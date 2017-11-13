@@ -14,8 +14,9 @@ import {
     browserHistory
 } from 'react-router';
 
-//容器
+//容器 Carousel
 import Index from './containers/Index.js';
+import Carousel from './containers/Carousel.js';
 
 import Store from './store/';
 
@@ -27,6 +28,7 @@ render((
         <Router history={hashHistory}>
             <Route path="/" component={Index}></Route>
             <Route path="/index" component={Index}></Route>
+            <Route path="/carousel" component={Carousel}></Route>
         </Router>
     </Provider>
 ), document.getElementById('con'));
