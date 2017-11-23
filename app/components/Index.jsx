@@ -4,7 +4,7 @@ import Document from './plugins/doc/Document.jsx';
 import BaiduDoc from './plugins/doc/BaiduDoc.jsx';
 import FooterButtons from './plugins/footerButton/FooterButtons.jsx';
 
-var less = require('../less/index.less');
+var less = require('./less/index.less');
 
 class Index extends Component {
     constructor(...args) {
@@ -14,7 +14,7 @@ class Index extends Component {
         return (
             <div>
                 <BaiduDoc></BaiduDoc>
-                <FooterButtons></FooterButtons>
+                <FooterButtons color={"red"}></FooterButtons>
             </div>
         );
     }

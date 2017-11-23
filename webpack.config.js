@@ -47,7 +47,6 @@ module.exports = {
             }
         }),
     ],
-
     devServer: {
         contentBase: './build',
         colors: true,

@@ -1,11 +1,14 @@
-import React ,{Component} from 'react';
-var less = require('./footerButtons.less');
+import React, {Component} from 'react';
 
-class FootrButtons extends Component{
-    constructor(...args){
+class FootrButtons extends Component {
+    constructor(...args) {
         super(...args);
     }
-    render(){
+    componentWillMount() {
+        var theme = 'white';
+        require('./themes/'+theme+'/footerButtons.less');
+    }
+    render() {
         return (
             <div className='footer-buttons'>
                 <div className='button-item'>评论</div>

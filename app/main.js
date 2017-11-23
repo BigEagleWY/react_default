@@ -16,6 +16,7 @@ import {
 
 //容器 Carousel
 import Index from './containers/Index.js';
+import CssModules from './containers/CssModules.js';
 import Carousel from './containers/Carousel.js';
 
 import Store from './store/';
@@ -23,11 +24,13 @@ import Store from './store/';
 const store = Store();
 
 
+
 render((
     <Provider store={store}>
         <Router history={hashHistory}>
             <Route path="/" component={Index}></Route>
             <Route path="/index" component={Index}></Route>
+            <Route path="/cssmodules" component={CssModules}></Route>
             <Route path="/carousel" component={Carousel}></Route>
         </Router>
     </Provider>
