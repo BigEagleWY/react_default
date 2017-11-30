@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 var less = require('./doc.less');
 
-import lovarv from '../../../images/lovarv.jpg';
+import lovarv from '../../images/lovarv.jpg';
 
 class Document extends Component {
     constructor(...args) {

@@ -18,6 +18,7 @@ import {
 import Index from './containers/Index.js';
 import CssModules from './containers/CssModules.js';
 import Carousel from './containers/Carousel.js';
+import ThreeScreen from './containers/ThreeScreen.js';
 
 import Store from './store/';
 
@@ -32,6 +33,7 @@ render((
             <Route path="/index" component={Index}></Route>
             <Route path="/cssmodules" component={CssModules}></Route>
             <Route path="/carousel" component={Carousel}></Route>
+            <Route path="/threescreen" component={ThreeScreen}></Route>
         </Router>
     </Provider>
 ), document.getElementById('con'));
