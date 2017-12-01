@@ -9,17 +9,52 @@ import img2 from './demo2.jpg';
 class App extends Component {
     constructor(...args) {
         super(...args);
+        this.state = {
+            index: 0
+        }
 
     }
+    next() {
+        var next = this.state.index==5?0:this.state.index+1;
+        this.setState({index: next})
+    }
+    prev() {
+        var prev = this.state.index==0?5:this.state.index-1;
+        this.setState({index: prev})
+    }
     render() {
-        
+        const {width, height, autoplay, dots} = this.props;
         return (
             <div
+                className='carseoul'
                 style={{
-                width: 300,
-                height: 150
+                width: width,
+                height: height
             }}>
-                <Carousel autoplay={true} >
+                <div
+                    className='slick-block'
+                    style={{
+                    width: width,
+                    height: height
+                }}>
+                    <div
+                        className='slick-left'
+                        onClick={this
+                        .prev
+                        .bind(this)}
+                        style={{
+                        height: height
+                    }}></div>
+                    <div
+                        className='slick-right'
+                        onClick={this
+                        .next
+                        .bind(this)}
+                        style={{
+                        height: height
+                    }}></div>
+                </div>
+                <Carousel slickGoTo={this.state.index} autoplay={autoplay} dots={dots}>
                     <div>
                         <img src={img1} alt=""/>
                     </div>
