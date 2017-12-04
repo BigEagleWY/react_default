@@ -39,20 +39,22 @@ class App extends Component {
                 }}>
                     <div
                         className='slick-left'
-                        onClick={this
-                        .prev
-                        .bind(this)}
                         style={{
                         height: height
-                    }}></div>
+                    }}>
+                    <div className='left-btn' onClick={this
+                        .prev
+                        .bind(this)}>上一页</div>
+                    </div>
                     <div
                         className='slick-right'
-                        onClick={this
-                        .next
-                        .bind(this)}
                         style={{
                         height: height
-                    }}></div>
+                    }}>
+                     <div className='right-btn' onClick={this
+                        .next
+                        .bind(this)}>下一页</div>
+                    </div>
                 </div>
                 <Carousel slickGoTo={this.state.index} autoplay={autoplay} dots={dots}>
                     <div>
