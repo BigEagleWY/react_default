@@ -99,7 +99,7 @@
         // @off 没必要限制
         "react/self-closing-comp": "off",
         // @fixable 组件内方法必须按照一定规则排序
-        "react/sort-comp": "error",
+        "react/sort-comp": "off",
         // propTypes 的熟悉必须按照字母排序
         // @off 没必要限制
         "react/sort-prop-types": "off",
