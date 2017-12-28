@@ -111,6 +111,28 @@ const util = {
         return arr.filter(function (item, index, self) {
             return self.indexOf(item) === index;
         });
+    },
+    // 转为unicode 编码  
+    encodeUnicode: function (str) {
+        var res = [];
+        for (var i = 0; i < str.length; i++) {
+            res[i] = ("00" + str.charCodeAt(i).toString(16)).slice(-4);
+        }
+        return "\\u" + res.join("\\u");
+    },
+    // 解码  
+    decodeUnicode: function (str) {
+        str = str.replace(/\\/g, "%");
+        return unescape(str);
+    },
+    htmlToString: function (str) {
+        var result = '';
+        var tempStr ='';
+        if (str.indexOf('&#x') != -1) {
+            tempStr = str.split('&#x').join('\\u');
+            result = util.decodeUnicode(tempStr.split(';').join(''));
+        }
+        return result;
     }
 }
 module.exports = util;
