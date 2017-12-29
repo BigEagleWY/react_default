@@ -1,8 +1,17 @@
-import React, {Component} from 'react';
+import React, {
+  Component
+} from 'react';
 
-import {connect} from 'react-redux';
+import {
+  connect
+} from 'react-redux';
 
-import {getData,getData2} from '../actions/index.js';
+import {
+  getData,
+  getData2
+} from '../actions/index.js';
+
+import util from "../common/util.js";
 
 //组件
 
@@ -10,14 +19,17 @@ import Index from '../components/Index.jsx';
 
 class App extends Component {
 
-  componentWillMount(){
-    const {getData,getData2} = this.props;
+  componentWillMount() {
+    const {
+      getData,
+      getData2
+    } = this.props;
     getData();
     getData2();
   }
 
   render() {
-    return (<Index/>);
+    return ( < Index / > );
   }
 }
 const mapStateToProps = function (state) {
@@ -25,10 +37,10 @@ const mapStateToProps = function (state) {
 };
 const mapDispatchToProps = function (dispatch) {
   return {
-    getData:function(){
+    getData: function () {
       dispatch(getData());
     },
-    getData2:function(){
+    getData2: function () {
       dispatch(getData2());
     }
   }

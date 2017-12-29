@@ -127,12 +127,29 @@ const util = {
     },
     htmlToString: function (str) {
         var result = '';
-        var tempStr ='';
+        var tempStr = '';
         if (str.indexOf('&#x') != -1) {
             tempStr = str.split('&#x').join('\\u');
             result = util.decodeUnicode(tempStr.split(';').join(''));
         }
         return result;
+    },
+    encrypt: function (str) {
+        var text = util.encodeUnicode(str);
+        return text.split('\\u').join('');
+    },
+    decode: function (str) {
+        var text = str;
+        var temp = '\\u',
+            result = [];
+        for (let i = 0; i < text.length; i++) {
+            temp += text[i]
+            if (i % 4 == 3) {
+                result.push(temp);
+                temp = '\\u';
+            }
+        }
+        return util.decodeUnicode(result.join(''));
     }
 }
 module.exports = util;
