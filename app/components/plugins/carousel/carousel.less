@@ -1,50 +1,62 @@
 .ant-carousel .slick-slide {
     width: 100%;
-    img{
-        width:100%;
+    position: relative;
+    img {
+        width: 100%;
     }
-  }
-  .carseoul{
-      overflow: hidden;
-  }
-  .slick-block{
-      position: absolute;
-      left: 0;
-      top:0;
-      z-index: 1000;
-      div{
-          position: absolute;
-          z-index:1001;
-          width:50%;
-      }
-      .slick-left{
+}
+
+.carseoul {
+    overflow: hidden;
+}
+
+.slick-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    div {
+        position: absolute;
+        z-index: 11;
+        width: 50%;
+    }
+    .slick-left {
         left: 0;
-        .left-btn{
+        .left-btn {
             display: none;
-            width:50px;
-            height:25px;
+            width: 50px;
+            height: 25px;
             border-radius: 5px;
             background: yellow;
         }
-      }
-      .slick-left:hover{
-        .left-btn{
+    }
+    .slick-left:hover {
+        .left-btn {
             display: block;
         }
-      }
-      .slick-right:hover{
-        .right-btn{
+    }
+    .slick-right:hover {
+        .right-btn {
             display: block;
         }
-      }
-      .slick-right{
-        left:50%;
-        .right-btn{
+    }
+    .slick-right {
+        left: 50%;
+        .right-btn {
             display: none;
-            width:50px;
-            height:25px;
+            width: 50px;
+            height: 25px;
             border-radius: 5px;
             background: yellow;
         }
-      }
-  }
+    }
+}
+.audio-play{
+    position: absolute;
+    z-index: 11;
+    width:100px;
+    text-align: center;
+    height:25px;
+    right:0;
+    background: red;
+}

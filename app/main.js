@@ -20,6 +20,7 @@ import CssModules from './containers/CssModules.js';
 import Carousel from './containers/Carousel.js';
 import ThreeScreen from './containers/ThreeScreen.js';
 import OnePaperDoc from './containers/OnePaperDoc.js';
+import Gallery from './containers/Gallery.js';
 
 import Store from './store/';
 
@@ -35,7 +36,8 @@ render((
             <Route path="/cssmodules" component={CssModules}></Route>
             <Route path="/carousel" component={Carousel}></Route>
             <Route path="/threescreen" component={ThreeScreen}></Route>
-            <Route path="/onepaperdoc" component={OnePaperDoc}></Route>
+            <Route path="/doc" component={OnePaperDoc}></Route>
+            <Route path="/gallery" component={Gallery}></Route>
         </Router>
     </Provider>
 ), document.getElementById('con'));
