@@ -172,9 +172,6 @@ class App extends React.Component {
     );
   }
   _toggleShowVideo(url) {
-    if(this.state.autoPlay){
-      this._imageGallery.pause();
-    }
     this.state.showVideo[url] = !Boolean(this.state.showVideo[url]);
     this.setState({
       showVideo: this.state.showVideo
@@ -189,6 +186,14 @@ class App extends React.Component {
         this.setState({ showGalleryFullscreenButton: false });
       }
     }
+    if(this.state.autoPlay){
+      if(this._imageGallery.state.isPlaying){
+        this._imageGallery.pause();
+      }else{
+        this._imageGallery.play();
+      }
+    }
+
   }
   _renderVideo(item) {
     return (
