@@ -155,7 +155,7 @@ class App extends React.Component {
       <div className='image-gallery-image'>
         {
           <a onClick={this.playAudio.bind(this, item.embedUrl)}>
-            <div className='play-button'></div>
+            <div className='audio-play-button'></div>
             <img src={item.original} />
             {
               item.description &&
@@ -186,13 +186,11 @@ class App extends React.Component {
         this.setState({ showGalleryFullscreenButton: false });
       }
     }
-    // if(this.state.autoPlay){
-    //   if(this._imageGallery.state.isPlaying){
-    //     this._imageGallery.pause();
-    //   }else{
-    //     this._imageGallery.play();
-    //   }
-    // }
+    if(this.state.autoPlay){
+      if(this._imageGallery.state.isPlaying){
+        this._imageGallery.pause();
+      }
+    }
   }
   _renderVideo(item) {
     return (
