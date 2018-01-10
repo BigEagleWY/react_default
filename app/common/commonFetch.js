@@ -1,3 +1,12 @@
+var param = {
+    'method': 'get',
+    'mode': 'cors',
+    'credentials': 'include',
+    'headers': {
+        'Content-Type': 'application/json;charset=UTF-8',
+    }
+} 
+
 function commonFetch(url, callback) {
     fetch(url)
         .then(function (response) {
