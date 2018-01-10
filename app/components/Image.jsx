@@ -186,14 +186,13 @@ class App extends React.Component {
         this.setState({ showGalleryFullscreenButton: false });
       }
     }
-    if(this.state.autoPlay){
-      if(this._imageGallery.state.isPlaying){
-        this._imageGallery.pause();
-      }else{
-        this._imageGallery.play();
-      }
-    }
-
+    // if(this.state.autoPlay){
+    //   if(this._imageGallery.state.isPlaying){
+    //     this._imageGallery.pause();
+    //   }else{
+    //     this._imageGallery.play();
+    //   }
+    // }
   }
   _renderVideo(item) {
     return (
@@ -236,7 +235,6 @@ class App extends React.Component {
   onThumbnailError() {
 
   }
-
   render() {
     return (
 
