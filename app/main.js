@@ -21,6 +21,7 @@ import Carousel from './containers/Carousel.js';
 import ThreeScreen from './containers/ThreeScreen.js';
 import OnePaperDoc from './containers/OnePaperDoc.js';
 import Gallery from './containers/Gallery.js';
+import Video from './containers/Video.js';
 
 import Store from './store/';
 
@@ -38,6 +39,7 @@ render((
             <Route path="/threescreen" component={ThreeScreen}></Route>
             <Route path="/doc" component={OnePaperDoc}></Route>
             <Route path="/gallery" component={Gallery}></Route>
+            <Route path="/video" component={Video}></Route>
         </Router>
     </Provider>
 ), document.getElementById('con'));

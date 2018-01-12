@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 //import Carousel from './plugins/carousel/Carousel.jsx';
-import { Carousel } from 'react-responsive-carousel';
 //require('./less/onepaperdoc.less');
 
 class OnePaperDoc extends Component {
